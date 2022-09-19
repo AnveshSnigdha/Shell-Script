@@ -1,0 +1,31 @@
+pipeline{
+agent any
+stages{
+stage ("cloning the code from github"){
+steps{
+echo "cloning the code from github"
+}
+}
+stage ("Build the code"){
+steps{
+echo "to build the code through maven"
+}
+}
+stage ("test the code"){
+steps{
+echo "testing the code from different test cases"
+}
+}
+stage ("deploy the code from maven"){
+steps{
+echo "to deploy the code"
+}
+}
+stage ("scan the code automatically"){
+steps{
+echo "release the code in jenkins"
+}
+}
+}
+}
+ 
