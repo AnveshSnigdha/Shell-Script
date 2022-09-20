@@ -25,7 +25,7 @@
         }
         stage ("release the code on servers"){
             steps {
-                echo "deployment on production servers"
+                echo "deployment on production servers@gmail.com"
             }
         }
         
