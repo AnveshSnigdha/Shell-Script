@@ -1,32 +1,34 @@
-pipeline{
-agent any
-stages{
-stage ("cloning the code from github"){
-steps{
-checkout([$class: 'GitSCM', branches: [[name: '*/anvesh']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/AnveshSnigdha/Shell-Script.git']]])
-echo "cloning the code from github"
+
+ pipeline {
+    agent any
+    stages {
+        stage ("cloning code from github"){
+            steps {
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/AnveshSnigdha/Shell-Script.git']]])
+                echo "cloning code from github" 
+            }
+        }
+        stage ("BUILD THE CODE"){
+            steps {
+                echo "building the code by maven"
+            }
+        }
+        stage ("test the code"){
+            steps {
+                echo "testing the code by running the different test cases"
+            }
+        }
+        stage ("deploying the code on server"){
+            steps {
+                echo "deployment in test levels"
+            }
+        }
+        stage ("release the code on servers"){
+            steps {
+                echo "deployment on production servers"
+            }
+        }
+        
+    }
 }
-}
-stage ("Build the code"){
-steps{
-echo "to build the code through maven"
-}
-}
-stage ("test the code"){
-steps{
-echo "testing the code from different test cases"
-}
-}
-stage ("deploy the code from maven"){
-steps{
-echo "to deploy the code"
-}
-}
-stage ("scan the code automatically"){
-steps{
-echo "release the code in jenkins"
-}
-}
-}
-}
- 
+
