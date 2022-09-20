@@ -4,7 +4,7 @@
     stages {
         stage ("cloning code from github"){
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/AnveshSnigdha/Shell-Script.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/anvesh']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/AnveshSnigdha/Shell-Script.git']]])
                 echo "cloning code from github" 
             }
         }
