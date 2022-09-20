@@ -4,9 +4,9 @@ pipeline {
         stage('CLONING CODE FROM GITHUB') {
             steps {
             checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/AnveshSnigdha/Shell-Script']]])
+            echo "clone the code from github"
             }
         }
-        
         stage('BUILDING THE CODE') {
             steps {
                 echo "Building the code by Maven"
