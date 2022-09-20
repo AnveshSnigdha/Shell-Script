@@ -29,7 +29,7 @@ pipeline {
         }
         stage('POST-BUILD NOTIFICATION TO DEV TEAM') {
             steps {
-                echo "Trigger mail to Anveshteam@gmail.com"
+                echo "Trigger mail to AnveshSteam@gmail.com"
             }
         }
     }    
