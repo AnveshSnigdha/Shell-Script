@@ -26,8 +26,7 @@
             steps {
                 echo "deployment on production Productioenv@gmail.com"
             }
-        }
-        
+        }        
     }
 }
 
