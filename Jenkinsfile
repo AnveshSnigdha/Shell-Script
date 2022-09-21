@@ -20,12 +20,12 @@
         }
         stage ("deploying the code on server"){
             steps {
-                echo "deployment in test levels"
+                echo "deployment in test levels L1,l2,L3 and L4"
             }
         }
         stage ("release the code on servers"){
             steps {
-                echo "deployment on production servers@gmail.com"
+                echo "deployment on production Production@gmail.com"
             }
         }
         
